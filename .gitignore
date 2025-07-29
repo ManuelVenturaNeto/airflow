@@ -1,0 +1,9 @@
+# Ignorar arquivos de log do Airflow
+logs/
+*.log
+*.pyc
+__pycache__/
+.env
+.env.*
+.airflow/
+*.db
