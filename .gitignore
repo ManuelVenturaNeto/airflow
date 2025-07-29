@@ -4,6 +4,6 @@ logs/
 *.pyc
 __pycache__/
 .env
-.env.*
+.env
 .airflow/
 *.db
