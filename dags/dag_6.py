@@ -1,13 +1,14 @@
 from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
+from airflow.providers.standard.operators.bash import BashOperator
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from airflow.utils.task_group import TaskGroup
 
 with DAG(
-    "sexta_dag",
-    description="Primeira Dag",
-    schedule_interval=None,
-    start_date=datetime(2023, 3, 5),
+    "06_dag",
+    description="Exemplo",
+    schedule="0 3-19/4 * * *",
+    start_date=datetime.now(ZoneInfo("America/Sao_Paulo")),
     catchup=False,
 ) as dag:
     task_gp_1 = TaskGroup("gp_1", dag=dag)

@@ -1,12 +1,12 @@
 from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
+from airflow.providers.standard.operators.bash import BashOperator
 from datetime import datetime
 
 dag = DAG(
-    "primeira_dag",
+    "01_dag",
     description="Primeira Dag",
-    schedule_interval=None,
-    start_date=datetime(2023, 3, 5),
+    schedule=None,
+    start_date=datetime(2025, 7, 31),
     catchup=False,
 )
 
