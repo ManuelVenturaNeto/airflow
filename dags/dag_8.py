@@ -1,10 +1,10 @@
 from airflow import DAG
-from airflow.providers.standard.operators.bash import BashOperator
+from airflow.operators.bash import BashOperator
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 with DAG(
-    "07_dag",
+    "08_dag",
     description="Exemplo",
     schedule="0 3/4 * * *",
     start_date=datetime.now(ZoneInfo("America/Sao_Paulo")),
