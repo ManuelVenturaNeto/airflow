@@ -1,6 +1,7 @@
 logs
 config
 config/airflow.cfg
+sa-airflow.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
